@@ -26,7 +26,7 @@ def init_db(connection: sqlite3.Connection):
     connection.execute(
         """
     INSERT INTO note (id, description)
-    VALUES 
+    VALUES
         (1, 'note_1'),
         (2, 'note_2'),
         (3, 'note_2'),

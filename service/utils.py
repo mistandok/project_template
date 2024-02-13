@@ -1,7 +1,4 @@
 import dataclasses
-import json
-from curses.ascii import isalpha
-from typing import Iterable
 
 
 @dataclasses.dataclass

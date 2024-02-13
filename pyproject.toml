@@ -49,26 +49,10 @@ max_line_length = 120
 show_source = true
 extended_default_ignore = []
 
-#[tool.flakeheaven.plugins]
-## default plugins
-#pyflakes = ["+*"]
-#pycodestyle = ["+*"]
-## additional plugins
-#flake8 = ["+*"]
-## enable everything that starts from `flake8-`
-#"flake8-*" = ["+*"]
-#pylint = [
-#    "+*", # include everything
-#    "-C0114", # disable Missing module docstring (missing-module-docstring)
-#    "-C0116", # disable Missing function or method docstring  (missing-function-docstring)
-#    "-E0401", # disable Unable to import 'library' (import-error)
-#]
-#
-## match by prefix
-#[tool.flakeheaven.exceptions."dags/"]
-#pycodestyle = [
-#    "-W503" # disable line break before binary operator
-#]
-#pylint = [
-#    "-W0104" # disable statement seems to have no effect (pointless-statement)
-#]
+[tool.flake8]
+per-file-ignores = [
+    '__init__.py:F401',
+    'test_*.py:F401,F811',
+]
+max-line-length = 120
+count = true
