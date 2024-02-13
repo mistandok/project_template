@@ -73,5 +73,3 @@ def is_even_group(group: int):
 
 def is_very_smart_professor(professor: Professor):
     return len(professor.skills) > 2
-
-

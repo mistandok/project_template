@@ -1,6 +1,6 @@
 import pytest
 
-from service.utils import division, WrongDivider
+from service.utils import WrongDivider, division
 
 
 def test_division_success():

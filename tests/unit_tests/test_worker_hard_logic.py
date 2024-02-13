@@ -2,8 +2,8 @@ import mock
 import pytest
 import requests
 
-from service.hard_logic import UniversityClient, RemoteServerError, Worker, Student, Professor
-from tests.fixtures.repeatable_data import students, professors
+from service.hard_logic import Professor, RemoteServerError, Student, UniversityClient, Worker
+from tests.fixtures.repeatable_data import professors, students
 
 
 def test_worker_client_get_professors_timeout(students: list[Student]):
@@ -63,7 +63,7 @@ def test_worker_client_success(students: list[Student], professors: list[Profess
             Student("Anton", "Artikov", 1),
             Student("Dima", "Petrov", 3),
             Student("Katya", "Bulgakova", 5),
-        ]
+        ],
     }
 
     worker = Worker(university_client)

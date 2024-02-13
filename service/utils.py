@@ -1,7 +1,4 @@
 import dataclasses
-import json
-from curses.ascii import isalpha
-from typing import Iterable
 
 
 @dataclasses.dataclass
@@ -35,7 +32,4 @@ def format_data_for_display(people: list[Man]) -> list[str]:
 
 
 def format_data_for_service_response(people: list[Man]) -> dict:
-    return {
-        man_id: f"{man.surname} {man.name}"
-        for man_id, man in enumerate(people, start=1)
-    }
+    return {man_id: f"{man.surname} {man.name}" for man_id, man in enumerate(people, start=1)}

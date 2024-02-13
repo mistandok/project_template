@@ -2,7 +2,7 @@ import sqlite3
 
 import pytest
 
-from service.db import get_note_by_id, DataNotFound, Note
+from service.db import DataNotFound, Note, get_note_by_id
 from tests.fixtures.connections import sqlite_connection
 
 
