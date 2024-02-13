@@ -1,6 +1,6 @@
 import pytest
 
-from service.hard_logic import Student, Professor
+from service.hard_logic import Professor, Student
 from service.utils import Man
 
 
