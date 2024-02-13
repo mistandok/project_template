@@ -28,5 +28,5 @@ def professors() -> list[Professor]:
     return [
         Professor(1, "Albert", "Einstein", ["physics", "mathematics", "probability theory"]),
         Professor(2, "Mikhail", "Lomonosov", ["astronomy", "physics", "chemistry"]),
-        Professor(3, "Vasya", "Pupkin", ["good man"])
+        Professor(3, "Vasya", "Pupkin", ["good man"]),
     ]

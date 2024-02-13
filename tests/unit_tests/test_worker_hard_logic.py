@@ -63,7 +63,7 @@ def test_worker_client_success(students: list[Student], professors: list[Profess
             Student("Anton", "Artikov", 1),
             Student("Dima", "Petrov", 3),
             Student("Katya", "Bulgakova", 5),
-        ]
+        ],
     }
 
     worker = Worker(university_client)
