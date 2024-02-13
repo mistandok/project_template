@@ -37,18 +37,6 @@ use_parentheses = true
 multi_line_output = 3
 include_trailing_comma = true
 
-[tool.flakeheaven]
-exclude = [
-    ".history",
-    "venv",
-    "venv_linter",
-    "venv_tests",
-]
-format = "grouped"
-max_line_length = 120
-show_source = true
-extended_default_ignore = []
-
 [tool.flake8]
 per-file-ignores = [
     '__init__.py:F401',
