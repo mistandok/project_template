@@ -7,6 +7,8 @@ from settings import DB_NAME
 
 @pytest.fixture(scope="session", autouse=True)
 def sqlite_connection():
+
+    a =1+1
     connection = sqlite3.connect(DB_NAME)
     yield connection
     connection.close()
