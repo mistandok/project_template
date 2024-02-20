@@ -35,6 +35,7 @@ jobs:
           filters: |
             py_scripts_filter:
               - added|modified: '**/*.py'
+              - '!migrations'
       - name: Run linter
         if: ${{ steps.filter.outputs.py_scripts_filter == 'true' }}
         run: |
