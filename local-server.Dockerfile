@@ -17,6 +17,7 @@ RUN  apt-get update \
      && chown web:web -R $APP_DIR \
      && apt-get install -y netcat-traditional \
      && apt-get install -y build-essential \
+     && apt-get install -y acl \
      && pip install --upgrade pip
 
 RUN pip install -r requirements.txt
@@ -24,7 +25,10 @@ RUN pip install -r requirements.txt
 # Скопируйте всё оставшееся. Для ускорения сборки образа эту команду стоит разместить ближе к концу файла.
 COPY . $APP_DIR
 
-RUN chmod u+x $APP_DIR/local-start-server.sh
+# Выдаем пользователю права на испольняемый файл, чтобы он смог его запустить.
+RUN setfacl -R -m u:web:rwx $APP_DIR/local-start-server.sh
+
+USER web
 
 ENTRYPOINT ["/opt/app/local-start-server.sh"]
 

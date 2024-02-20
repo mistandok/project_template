@@ -33,7 +33,7 @@ settings = None
 
 
 @routes.get('/note/{id}')
-async def get_example(request: Request) -> Response:
+async def get(request: Request) -> Response:
     note_id = int(request.match_info['id'])
 
     query = """
