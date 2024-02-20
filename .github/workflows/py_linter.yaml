@@ -34,11 +34,9 @@ jobs:
           list-files: 'shell'
           filters: |
             py_scripts_filter:
-              - added|modified: '**/*.py'
-            path-to-exclude:
-              - 'migrations/**'
+              - added|modified: '!migrations*/*.py'
       - name: Run linter
-        if: ${{ (steps.filter.outputs.paths-to-exclude == 'false' && steps.filter.outputs.py_scripts_filter == 'true') }}
+        if: ${{ (steps.filter.outputs.py_scripts_filter == 'true') }}
         run: |
           echo "Changed python files: ${{ steps.filter.outputs.py_scripts_filter_files }}"
           flake8 ${{ steps.filter.outputs.py_scripts_filter_files }}
