@@ -1,0 +1,16 @@
+version: '3'
+
+volumes:
+  postgres_prod_volume:
+
+name: prod_project
+
+services:
+  note-prod-db:
+    image: postgres:14.0
+    env_file:
+      - .env.prod
+    volumes:
+      - postgres_prod_volume:/var/lib/postgresql/data
+    ports:
+      - "${PG_PORT}:5432"
