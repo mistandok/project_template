@@ -21,6 +21,7 @@ exclude = '''
   | makefile\.inc
   | build
   | dist
+  | migrations
 )/
 '''
 
@@ -32,6 +33,7 @@ skip_glob = [
     "venv",
     "venv_linter",
     "venv_tests",
+    "migrations",
 ]
 use_parentheses = true
 multi_line_output = 3
@@ -44,3 +46,6 @@ per-file-ignores = [
 ]
 max-line-length = 120
 count = true
+exclude = [
+    "migrations",
+]
