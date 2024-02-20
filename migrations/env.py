@@ -38,6 +38,8 @@ class MigrationSettings(BaseSettings):
     postgres_user: str
     postgres_password: str
     postgres_db: str
+    app_host: str
+    app_port: int
 
 
 def run_migrations_offline() -> None:
