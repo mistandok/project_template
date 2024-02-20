@@ -34,7 +34,7 @@ jobs:
           list-files: 'shell'
           filters: |
             py_scripts_filter:
-              - added|modified: '!migrations*/*.py'
+              - added|modified: '**/*.py'
       - name: Run linter
         if: ${{ (steps.filter.outputs.py_scripts_filter == 'true') }}
         run: |
